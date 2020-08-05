@@ -66,7 +66,7 @@ class Scraper:
             productlist = []
             n = 0
             for price in self.soup.select("p.price-final"):
-                pricelist.append(price.get_text().split()[0])
+                pricelist.append(price.get_text()[:-3])
                 n += 1
 
             for table in self.soup.select("div.display-cell.table-variations-cell.variation-title"):
